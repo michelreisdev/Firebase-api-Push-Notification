@@ -1,12 +1,13 @@
 <?php
-$img = 'https://d3ugyf2ht6aenh.cloudfront.net/stores/002/007/282/themes/common/logo-1512487490-1650888813-b7a11699b80f2c22ab3ebbeaf2c4950c1650888813-320-0.png?0';
-$url = "https://fcm.googleapis.com/fcm/send";
-$token = "fAfJNw2sSRmkrykvULdK7c:APA91bGwEOq85anIEKcYspu-06xzzUE9sz0gemca8rQrk6_BvZK2wENopKqODXMrJKpnyiN_DxAeL2E0xRJa6kccdW9ahep_O2ETXg_G3jWJSWwSbPne7Rd0VRqqEuB2HgjnNVKuiNks";
-$serverKey = 'AAAAEjut24E:APA91bE58LUS7zpNwCNJ7Dk3WmM30hz0YDpytMiHYushWbB5djUcBUcQ2ffgTx1x6mGDM_dBEMoZFDvG0GJGaio8flB9DVx0nt5MdNWxrsDu7ZP5Dhypf2mU0xZZjeow8HnmXqW_WYQg';
-$title = "Notificação DT3 😊";
-$body = "💪 Seu pedido está em sepação. 💪";
 
+$ini = parse_ini_file('../data.ini');
 
+$img = $ini['IMG'];
+$url = $ini['url'];
+$token = $ini['token'];
+$serverKey = $ini['serverKey'];
+$title = $ini['title'];
+$body = $ini['body'];
 
 
 $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1',  "image" => $img,  );
