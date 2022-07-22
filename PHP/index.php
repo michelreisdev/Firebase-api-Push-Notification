@@ -2,19 +2,16 @@
 
 $ini = parse_ini_file('../data.ini');
 
-$img = $ini['IMG'];
+$urlImg = $ini['IMG'];
 $url = $ini['url'];
 $token = $ini['token'];
 $serverKey = $ini['serverKey'];
 $title = $ini['title'];
 $body = $ini['body'];
 
-
-$notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1',  "image" => $img,  );
+$notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1',  "image" => $urlImg,  );
 $data = array('click_action' => 'https://www.google.com.br');
 $arrayToSend = array('to' => $token, 'notification' => $notification, 'priority' => 'high', 'data' => $data );
-
-
 
 $json = json_encode($arrayToSend);
 $headers = array();
